@@ -1,135 +1,47 @@
-/* style_en.css - English version */
-body {
-  font-family: 'Arial', sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f5f5f5;
-  color: #333;
-  line-height: 1.6;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - English Version</title>
+    <link rel="stylesheet" href="style_en.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to our website</h1>
+        <nav>
+            <a href="index_fr.html">Français</a>
+            <a href="index_en.html">English</a>
+            <a href="index_es.html">Español</a>
+        </nav>
+    </header>
+    
+    <section class="intro">
+        <h2>Discover our services</h2>
+        <p>We offer tailored solutions to improve your productivity and management.</p>
+    </section>
 
-header {
-  background-color: #007bff;
-  padding: 20px 0;
-  color: white;
-  text-align: center;
-}
+    <section class="services">
+        <div class="service-item">
+            <h4>Consulting</h4>
+            <p>We provide consulting services in management and strategy.</p>
+        </div>
+        <div class="service-item">
+            <h4>Training</h4>
+            <p>Training sessions for your team in various fields to enhance your processes.</p>
+        </div>
+    </section>
 
-header nav a {
-  color: white;
-  text-decoration: none;
-  margin-right: 15px;
-  font-size: 1.1rem;
-  font-weight: 500;
-}
+    <section class="cta">
+        <h3>Get started now!</h3>
+        <a href="#" class="cta-button">Contact us</a>
+    </section>
 
-header nav a:hover {
-  text-decoration: underline;
-}
-
-.intro {
-  text-align: center;
-  padding: 50px 20px;
-  background-color: #fff;
-  margin-top: 20px;
-}
-
-.intro h2 {
-  font-size: 2.5rem;
-  color: #007bff;
-  font-weight: 700;
-}
-
-.intro p {
-  font-size: 1.2rem;
-  max-width: 800px;
-  margin: 20px auto;
-  line-height: 1.6;
-  color: #666;
-}
-
-.services {
-  display: flex;
-  justify-content: space-around;
-  padding: 50px 20px;
-  background-color: #fff;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.services .service-item {
-  background-color: #f9f9f9;
-  padding: 30px;
-  border-radius: 8px;
-  width: 45%;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  text-align: center;
-  transition: all 0.3s ease;
-}
-
-.services .service-item:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 5px 20px rgba(0,0,0,0.15);
-}
-
-.services .service-item h4 {
-  font-size: 1.8rem;
-  color: #007bff;
-  margin-bottom: 15px;
-}
-
-.services .service-item p {
-  font-size: 1rem;
-  line-height: 1.5;
-  color: #666;
-}
-
-.cta {
-  background-color: #007bff;
-  color: white;
-  text-align: center;
-  padding: 40px 20px;
-  margin-top: 50px;
-}
-
-.cta h3 {
-  font-size: 2.2rem;
-  margin-bottom: 20px;
-}
-
-.cta .cta-button {
-  padding: 15px 30px;
-  background-color: #ff9900;
-  color: white;
-  text-decoration: none;
-  font-size: 1.2rem;
-  border-radius: 5px;
-  transition: background-color 0.3s;
-}
-
-.cta .cta-button:hover {
-  background-color: #e68a00;
-}
-
-footer {
-  background-color: #333;
-  color: white;
-  padding: 20px 0;
-  text-align: center;
-  margin-top: 50px;
-}
-
-footer .footer-links {
-  font-size: 1rem;
-}
-
-footer .footer-links a {
-  color: #fff;
-  text-decoration: none;
-  margin: 0 10px;
-  font-weight: 500;
-}
-
-footer .footer-links a:hover {
-  text-decoration: underline;
-}
+    <footer>
+        <div class="footer-links">
+            <a href="#">Legal Notice</a>
+            <a href="#">Privacy Policy</a>
+        </div>
+    </footer>
+</body>
+</html>
