@@ -1,117 +1,43 @@
-/* Reset du style de base */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Style global */
-body {
-    font-family: 'Open Sans', sans-serif;
-    background-color: #fff;
-    color: #333;
-}
-
-/* En-tête (Header) */
-header {
-    background-color: #f5f5f5;
-    padding: 20px 0;
-    text-align: center;
-}
-
-header nav .logo h1 {
-    font-size: 2.5rem;
-    color: #333;
-}
-
-header nav .nav-links {
-    list-style: none;
-    margin-top: 15px;
-}
-
-header nav .nav-links li {
-    display: inline;
-    margin-right: 20px;
-}
-
-header nav .nav-links a {
-    text-decoration: none;
-    color: #333;
-    font-size: 1.1rem;
-}
-
-/* Section Introduction */
-.intro {
-    text-align: center;
-    padding: 50px 20px;
-    background-color: #eaeaea;
-}
-
-.intro h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-}
-
-.intro p {
-    font-size: 1.2rem;
-}
-
-/* Section Services */
-.services {
-    padding: 50px 20px;
-    text-align: center;
-}
-
-.services h3 {
-    font-size: 2rem;
-    margin-bottom: 30px;
-}
-
-.service-item {
-    margin-bottom: 20px;
-}
-
-.service-item h4 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-}
-
-/* Section Call-to-Action */
-.cta {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 50px 20px;
-}
-
-.cta h3 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-.cta-button {
-    display: inline-block;
-    padding: 15px 30px;
-    background-color: #007BFF;
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.2rem;
-    border-radius: 5px;
-}
-
-.cta-button:hover {
-    background-color: #0056b3;
-}
-
-/* Pied de page */
-footer {
-    background-color: #f5f5f5;
-    text-align: center;
-    padding: 20px 0;
-}
-
-footer .footer-links a {
-    text-decoration: none;
-    color: #333;
-    margin: 0 10px;
-}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Française - 5ky</title>
+  <link rel="stylesheet" href="style_fr.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html">Choisir la langue</a>
+      <h1>5ky - Conseil et Audit 5S</h1>
+    </nav>
+  </header>
+  <section class="intro">
+    <h2>Bienvenue sur 5ky</h2>
+    <p>Nous accompagnons les entreprises dans l'optimisation de leur organisation grâce aux audits 5S et au Lean Management. Découvrez nos services et améliorez votre efficacité.</p>
+  </section>
+  <section class="services">
+    <div class="service-item">
+      <h4>Audit 5S</h4>
+      <p>Nous réalisons une analyse approfondie de votre organisation et proposons des solutions adaptées pour améliorer votre productivité.</p>
+    </div>
+    <div class="service-item">
+      <h4>Conseil en Organisation</h4>
+      <p>Nous vous aidons à structurer votre espace de travail en appliquant les principes des 5S et du Lean Management.</p>
+    </div>
+  </section>
+  <section class="cta">
+    <h3>Commencez votre audit dès maintenant !</h3>
+    <a href="#contact" class="cta-button">Demander un audit</a>
+  </section>
+  <footer>
+    <p>&copy; 2025 5ky - Tous droits réservés</p>
+    <div class="footer-links">
+      <a href="index.html">Choisir la langue</a>
+      <a href="#services">Nos services</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </footer>
+</body>
+</html>
