@@ -1,51 +1,122 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio - Versión en Español</title>
-    <link rel="stylesheet" href="style_es.css">
-</head>
-<body>
-    <header>
-        <h1>Bienvenido a nuestro sitio</h1>
-        <nav>
-            <a href="index_fr.html">Français</a>
-            <a href="index_en.html">English</a>
-            <a href="index_es.html">Español</a>
-        </nav>
-    </header>
-    
-    <section class="intro">
-        <h2>Descubre nuestros servicios</h2>
-        <p>Ofrecemos soluciones personalizadas para mejorar tu productividad y gestión.</p>
-    </section>
+/* style_es.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  color: #333;
+}
 
-    <section class="services">
-        <div class="service-item">
-            <h4>Consultoría</h4>
-            <p>Te ofrecemos servicios de consultoría en mejora continua y en 5S.</p>
-        </div>
-        <div class="service-item">
-            <h4>Formación</h4>
-            <p>Te ofrecemos formacion de 5S para tus equipos.</p>
-        </div>
-        <div class="service-item">
-            <h4>Seguimiento</h4>
-            <p>Te acompañamos en el seguimiento de las performances de tu mejora continua, con herrramientas hechas a medida para tu empresa</p>
-        </div>
-    </section>
+header {
+  background-color: #007bff;
+  padding: 20px 0;
+  color: white;
+  text-align: center;
+}
 
-    <section class="cta">
-        <h3>¡Comienza ahora!</h3>
-        <a href="#" class="cta-button">Contáctanos</a>
-    </section>
+header nav a {
+  color: white;
+  text-decoration: none;
+  margin-right: 15px;
+  font-size: 1.1rem;
+}
 
-    <footer>
-        <div class="footer-links">
-            <a href="#">Aviso legal</a>
-            <a href="#">Política de privacidad</a>
-        </div>
-    </footer>
-</body>
-</html>
+header nav a:hover {
+  text-decoration: underline;
+}
+
+.intro {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #fff;
+  margin-top: 20px;
+}
+
+.intro h2 {
+  font-size: 2.5rem;
+  color: #007bff;
+}
+
+.intro p {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 20px auto;
+  line-height: 1.6;
+}
+
+.services {
+  display: flex;
+  justify-content: space-around;
+  padding: 50px 20px;
+  background-color: #fff;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.services .service-item {
+  background-color: #f9f9f9;
+  padding: 30px;
+  border-radius: 8px;
+  width: 45%;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.services .service-item h4 {
+  font-size: 1.6rem;
+  color: #007bff;
+  margin-bottom: 15px;
+}
+
+.services .service-item p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.cta {
+  background-color: #007bff;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+  margin-top: 50px;
+}
+
+.cta h3 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.cta .cta-button {
+  padding: 15px 30px;
+  background-color: #ff9900;
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  border-radius: 5px;
+}
+
+.cta .cta-button:hover {
+  background-color: #e68a00;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  margin-top: 50px;
+}
+
+footer .footer-links {
+  font-size: 1rem;
+}
+
+footer .footer-links a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+footer .footer-links a:hover {
+  text-decoration: underline;
+}
