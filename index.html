@@ -3,17 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Choose your language</title>
-    <link rel="stylesheet" href="style.css">
+    <title>5ky - Accueil</title>
+    <link rel="stylesheet" href="style.css"> <!-- On liera le CSS à ce fichier HTML -->
 </head>
 <body>
-    <div class="language-choice">
-        <h1>Choisissez votre langue</h1>
-        <div class="languages">
-            <a href="index_fr.html">Français</a>
-            <a href="index_en.html">English</a>
-            <a href="index_es.html">Español</a>
+    <!-- En-tête (Header) -->
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>5ky</h1> <!-- Logo simple avec le nom de l'entreprise -->
+            </div>
+            <ul class="nav-links">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#cta">Commencer un audit</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Section Introduction -->
+    <section class="intro">
+        <h2>Bienvenue chez 5ky</h2>
+        <p>Nous vous accompagnons dans l’optimisation de vos processus avec les audits 5S.</p>
+    </section>
+
+    <!-- Section Services -->
+    <section id="services" class="services">
+        <h3>Nos Services</h3>
+        <div class="service-item">
+            <h4>Audit 5S</h4>
+            <p>Optimisez votre organisation avec notre audit 5S personnalisé.</p>
         </div>
-    </div>
+        <div class="service-item">
+            <h4>Conseil en Organisation</h4>
+            <p>Nous vous aidons à réorganiser vos espaces et vos processus de manière efficace.</p>
+        </div>
+    </section>
+
+    <!-- Section Call-to-Action -->
+    <section id="cta" class="cta">
+        <h3>Prêt à commencer votre audit ?</h3>
+        <a href="audit.html" class="cta-button">Commencer un audit</a>
+    </section>
+
+    <!-- Pied de page -->
+    <footer>
+        <div class="footer-links">
+            <a href="#contact">Contact</a> | <a href="#">Mentions légales</a>
+        </div>
+    </footer>
 </body>
 </html>
