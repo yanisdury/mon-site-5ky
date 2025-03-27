@@ -2,15 +2,17 @@ document.addEventListener("DOMContentLoaded", function() {
     let results = JSON.parse(localStorage.getItem('auditResults')) || {};
     let tableBody = document.getElementById('audit-results');
 
+    // Vider le tableau avant d'ajouter les résultats
+    tableBody.innerHTML = "";
+
     if (Object.keys(results).length === 0) {
         tableBody.innerHTML = "<tr><td colspan='2'>Aucun audit enregistré.</td></tr>";
     } else {
-        document.querySelectorAll('.audit-question').forEach((question, index) => {
-            let questionText = question.querySelector('label').innerText;
-            let response = results[`question_${index + 1}`] || "Non répondu";
+        Object.keys(results).forEach((key, index) => {
+            let response = results[key] || "Non répondu";
 
             let row = document.createElement('tr');
-            row.innerHTML = `<td>${questionText}</td><td>${response}</td>`;
+            row.innerHTML = `<td>Question ${index + 1}</td><td>${response}</td>`;
             tableBody.appendChild(row);
         });
     }
