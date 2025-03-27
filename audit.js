@@ -56,3 +56,24 @@ document.addEventListener("DOMContentLoaded", loadAuditResults);
 document.querySelectorAll('.audit-question input').forEach(input => {
     input.addEventListener('change', saveAuditResults);
 });
+document.getElementById('download-pdf').addEventListener('click', function() {
+    const { jsPDF } = window.jspdf;
+    const doc = new jsPDF();
+
+    doc.setFontSize(16);
+    doc.text("Rapport d'Audit 5S", 10, 10);
+
+    let results = JSON.parse(localStorage.getItem('auditResults')) || {};
+    let y = 20;
+
+    document.querySelectorAll('.audit-question').forEach((question, index) => {
+        let questionText = question.querySelector('label').innerText;
+        let response = results[`question_${index + 1}`] || "Non répondu";
+
+        doc.setFontSize(12);
+        doc.text(`${index + 1}. ${questionText}: ${response}`, 10, y);
+        y += 10;
+    });
+
+    doc.save("Rapport_Audit_5S.pdf");
+});
