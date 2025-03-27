@@ -24,5 +24,43 @@
     </section>
 
     <script src="resultats.js"></script>
+    <!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Résultats de l'Audit</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Résultats de l'Audit 5S</h1>
+    </header>
+
+    <section>
+        <h2>Score total</h2>
+        <p id="total-score">Calcul en cours...</p>
+    </section>
+
+    <section>
+        <h2>Détails des réponses</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Question</th>
+                    <th>Réponse</th>
+                </tr>
+            </thead>
+            <tbody id="audit-results">
+                <!-- Les résultats seront insérés ici -->
+            </tbody>
+        </table>
+    </section>
+
+    <button id="download-pdf">Télécharger le PDF</button>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>
 </body>
 </html>
