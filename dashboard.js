@@ -1,25 +1,18 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.getElementById('download-pdf').addEventListener('click', function() {
+    const { jsPDF } = window.jspdf;
+    const doc = new jsPDF();
+
+    doc.setFontSize(16);
+    doc.text("Rapport d'Audit 5S", 10, 10);
+
     let results = JSON.parse(localStorage.getItem('auditResults')) || {};
-    let tableBody = document.getElementById('audit-results');
-    let scoreDisplay = document.getElementById('total-score');
-
-    if (!results || Object.keys(results).length === 0) {
-        tableBody.innerHTML = "<tr><td colspan='2'>Aucun audit enregistré.</td></tr>";
-        scoreDisplay.innerText = "Score : 0 / 0";
-        return;
-    }
-
-    let totalScore = 0;
-    let totalQuestions = Object.keys(results).length;
+    let y = 20;
 
     Object.keys(results).forEach((key, index) => {
-        let score = parseInt(results[key]) || 0;
-        totalScore += score;
-
-        let row = document.createElement('tr');
-        row.innerHTML = `<td>Question ${index + 1}</td><td>${results[key]}</td>`;
-        tableBody.appendChild(row);
+        doc.setFontSize(12);
+        doc.text(`${index + 1}. Question ${index + 1}: ${results[key]}`, 10, y);
+        y += 10;
     });
 
-    scoreDisplay.innerText = `Score total : ${totalScore} / ${totalQuestions * 5}`;
+    doc.save("Rapport_Audit_5S.pdf");
 });
