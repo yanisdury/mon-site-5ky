@@ -17,3 +17,42 @@ document.getElementById("auditForm").addEventListener("submit", function(event) 
     // Redirection vers la page des résultats
     window.location.href = "resultats.html";
 });
+
+// Fonction pour sauvegarder les réponses
+function saveAuditResults() {
+    let results = {};
+    
+    document.querySelectorAll('.audit-question').forEach((question, index) => {
+        let selectedValue = question.querySelector('input:checked');
+        results[`question_${index + 1}`] = selectedValue ? selectedValue.value : null;
+    });
+
+    localStorage.setItem('auditResults', JSON.stringify(results));
+    console.log("Audit sauvegardé !");
+}
+
+// Fonction pour récupérer les réponses sauvegardées
+function loadAuditResults() {
+    let results = JSON.parse(localStorage.getItem('auditResults'));
+
+    if (results) {
+        document.querySelectorAll('.audit-question').forEach((question, index) => {
+            let savedValue = results[`question_${index + 1}`];
+            if (savedValue) {
+                let radioInput = question.querySelector(`input[value="${savedValue}"]`);
+                if (radioInput) {
+                    radioInput.checked = true;
+                }
+            }
+        });
+        console.log("Audit chargé !");
+    }
+}
+
+// Charger les résultats au chargement de la page
+document.addEventListener("DOMContentLoaded", loadAuditResults);
+
+// Sauvegarde automatique à chaque sélection
+document.querySelectorAll('.audit-question input').forEach(input => {
+    input.addEventListener('change', saveAuditResults);
+});
