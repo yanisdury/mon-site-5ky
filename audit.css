@@ -1,0 +1,125 @@
+/* Styles généraux */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+    color: #333;
+}
+
+/* Header et navigation */
+header {
+    background: #0073e6;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Conteneur principal */
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+form {
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style des questions */
+.audit-question {
+    margin-bottom: 20px;
+}
+
+.audit-question label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Style des curseurs */
+.slider-container {
+    display: flex;
+    align-items: center;
+}
+
+.slider {
+    flex: 1;
+    -webkit-appearance: none;
+    width: 100%;
+    height: 8px;
+    border-radius: 5px;
+    background: linear-gradient(to right, black 30%, red 50%, orange 80%, green 100%);
+    outline: none;
+    opacity: 0.9;
+    transition: opacity 0.2s;
+    cursor: pointer;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #0073e6;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: #0073e6;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Valeur dynamique du curseur */
+.value {
+    width: 40px;
+    text-align: center;
+    font-weight: bold;
+    color: #0073e6;
+    margin-left: 10px;
+}
+
+/* Bouton de validation */
+button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background: #0073e6;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #005bb5;
+}
