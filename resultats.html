@@ -1,38 +1,33 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Résultats Audit</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+<section class="audit-history">
+    <h2>Historique des audits</h2>
+    <table id="auditTable">
+        <thead>
+            <tr>
+                <th>Date et Heure</th>
+                <th>Score</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Les audits seront ajoutés ici -->
+        </tbody>
+    </table>
+</section>
 
-    <header>
-        <h1>Résultats de l'Audit</h1>
-        <nav>
-            <a href="index.html">Accueil</a>
-            <a href="audit.html">Audit</a>
-            <a href="resultats.html">Résultats</a>
-        </nav>
-    </header>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    let auditHistory = JSON.parse(localStorage.getItem("auditHistory")) || [];
+    let auditTableBody = document.querySelector("#auditTable tbody");
 
-    <div id="resultsContainer">
-        <h2>Résumé</h2>
-        <p id="scoreDisplay"></p>
-    </div>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            let results = JSON.parse(localStorage.getItem("auditResults"));
-            if (results) {
-                document.getElementById("scoreDisplay").innerText =
-                    `Score total: ${results.totalScore} / ${results.maxScore}`;
-            } else {
-                document.getElementById("scoreDisplay").innerText = "Aucun audit enregistré.";
-            }
+    if (auditHistory.length === 0) {
+        auditTableBody.innerHTML = "<tr><td colspan='2'>Aucun audit enregistré</td></tr>";
+    } else {
+        auditHistory.forEach(audit => {
+            let row = `<tr>
+                <td>${audit.date}</td>
+                <td>${audit.score} / 10</td>
+            </tr>`;
+            auditTableBody.innerHTML += row;
         });
-    </script>
-
-</body>
-</html>
+    }
+});
+</script>
