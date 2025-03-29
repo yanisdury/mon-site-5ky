@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Résultats de l'Audit</title>
     <link rel="stylesheet" href="style_resultats.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Import de Chart.js -->
 </head>
 <body>
 
@@ -19,17 +20,7 @@
     <section class="audit-results">
         <h2>Votre Score</h2>
         <div class="gauge-container">
-            <svg class="gauge" viewBox="0 0 200 100">
-                <!-- Fond du compteur -->
-                <path d="M10,90 A90,90 0 0,1 190,90" stroke="#ccc" stroke-width="10" fill="none"/>
-                <!-- Couleurs des zones -->
-                <path d="M10,90 A90,90 0 0,1 70,10" stroke="black" stroke-width="10" fill="none"/>
-                <path d="M70,10 A90,90 0 0,1 110,10" stroke="red" stroke-width="10" fill="none"/>
-                <path d="M110,10 A90,90 0 0,1 150,10" stroke="orange" stroke-width="10" fill="none"/>
-                <path d="M150,10 A90,90 0 0,1 190,90" stroke="green" stroke-width="10" fill="none"/>
-                <!-- Aiguille -->
-                <line id="needle" x1="100" y1="90" x2="100" y2="30" stroke="black" stroke-width="5"/>
-            </svg>
+            <canvas id="gaugeChart"></canvas> <!-- Jauge Chart.js -->
         </div>
         <p id="score-value">Score: 0 / 10</p>
     </section>
