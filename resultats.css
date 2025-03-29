@@ -1,0 +1,24 @@
+.gauge-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.gauge {
+    width: 200px;
+    height: 100px;
+    background: linear-gradient(to right, black 30%, red 50%, orange 80%, green 100%);
+    border-radius: 100px 100px 0 0;
+    position: relative;
+    margin: 20px auto;
+}
+
+.needle {
+    width: 5px;
+    height: 100px;
+    background: black;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform-origin: bottom center;
+    transition: transform 1s ease-out;
+}
