@@ -1,47 +1,58 @@
-/* Style général */
-body {
-    font-family: Arial, sans-serif;
+/* Réinitialisation globale */
+* {
     margin: 0;
     padding: 0;
-    background-color: #f5f5f5;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* ---- BODY ---- */
+body {
+    background-color: #f4f4f4;
     color: #333;
-}
-
-/* En-tête */
-header {
-    background-color: #007bff;
-    color: white;
     text-align: center;
-    padding: 20px 0;
 }
 
-header nav a {
+/* ---- HEADER ---- */
+header {
+    background-color: #007BFF;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    margin: 0 15px;
     color: white;
     text-decoration: none;
-    margin: 0 15px;
-    font-size: 1.2rem;
+    font-weight: bold;
 }
 
-header nav a:hover {
+nav a:hover {
     text-decoration: underline;
 }
 
-/* Section Contact */
+/* ---- SECTION CONTACT ---- */
 .contact-info, .contact-form, .social-media {
-    background-color: white;
+    background: white;
     max-width: 600px;
-    margin: 30px auto;
+    margin: 20px auto;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
 }
 
 h2 {
-    color: #007bff;
+    text-align: center;
+    margin-bottom: 15px;
 }
 
-/* Formulaire */
+/* ---- FORMULAIRE ---- */
 form {
     display: flex;
     flex-direction: column;
@@ -55,40 +66,31 @@ input, textarea {
     border-radius: 5px;
 }
 
+textarea {
+    resize: none;
+}
+
+/* ---- BOUTONS ---- */
 button {
-    background-color: #007bff;
+    background-color: #007BFF;
     color: white;
-    padding: 10px 20px;
     border: none;
-    border-radius: 5px;
-    font-size: 1.2rem;
+    padding: 10px 15px;
+    font-size: 16px;
     cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
 }
 
 button:hover {
     background-color: #0056b3;
 }
 
-/* Réseaux sociaux */
-.social-link {
-    display: inline-block;
-    margin: 10px;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-.social-link:hover {
-    background-color: #0056b3;
-}
-
-/* Pied de page */
+/* ---- FOOTER ---- */
 footer {
-    text-align: center;
-    background-color: #333;
+    margin-top: 20px;
+    background-color: #007BFF;
     color: white;
-    padding: 15px 0;
-    margin-top: 30px;
+    padding: 10px;
+    text-align: center;
 }
