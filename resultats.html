@@ -3,64 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Résultats de l'Audit</title>
+    <title>Résultats</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </head>
 <body>
+
     <header>
         <h1>Résultats de l'Audit</h1>
         <nav>
-            <a href="index_fr.html">Accueil</a>
-            <a href="audit.html">Audit</a>
-            <a href="resultats.html">Résultats</a>
+            <a href="index.html">Accueil</a>
+            <a href="audit.html">Réaliser un Audit</a>
+            <a href="contact.html">Contact</a>
         </nav>
     </header>
 
-    <section class="resultats">
-        <h2>Dernier Audit</h2>
-        <p><strong>Date :</strong> <span id="date"></span></p>
-        <p><strong>Score 5S :</strong> <span id="score"></span></p>
-        <p><strong>Commentaires :</strong> <span id="commentaires"></span></p>
-    </section>
-
-    <script src="resultats.js"></script>
-    <!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Résultats de l'Audit</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <h1>Résultats de l'Audit 5S</h1>
-    </header>
-
-    <section>
-        <h2>Score total</h2>
-        <p id="total-score">Calcul en cours...</p>
-    </section>
-
-    <section>
-        <h2>Détails des réponses</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Question</th>
-                    <th>Réponse</th>
-                </tr>
-            </thead>
-            <tbody id="audit-results">
-                <!-- Les résultats seront insérés ici -->
-            </tbody>
-        </table>
+    <section id="results">
+        <h2>Votre Score :</h2>
+        <p id="score"></p>
     </section>
 
     <button id="download-pdf">Télécharger le PDF</button>
 
     <script src="dashboard.js"></script>
-</body>
-</html>
+
 </body>
 </html>
