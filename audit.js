@@ -1,22 +1,20 @@
 document.getElementById("auditForm").addEventListener("submit", function(event) {
-    event.preventDefault();
+    event.preventDefault(); 
 
     let results = {};
     let totalScore = 0;
-    let totalQuestions = 0;
+    let numQuestions = 0;
 
-    document.querySelectorAll(".audit-question").forEach((question, index) => {
-        let selected = question.querySelector("input:checked");
-        if (selected) {
-            let value = parseInt(selected.value);
-            results[`question_${index + 1}`] = value;
-            totalScore += value;
-            totalQuestions++;
-        }
+    document.querySelectorAll('.audit-question input').forEach((input, index) => {
+        let score = parseInt(input.value);
+        results[`question_${index + 1}`] = score;
+        totalScore += score;
+        numQuestions++;
     });
 
     results["totalScore"] = totalScore;
-    results["maxScore"] = totalQuestions * 5;
+    results["maxScore"] = numQuestions * 10; // Score max possible
+    results["date"] = new Date().toLocaleDateString();
 
     localStorage.setItem("auditResults", JSON.stringify(results));
 
