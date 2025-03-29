@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Résultats</title>
+    <title>Résultats Audit</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </head>
 <body>
 
@@ -13,19 +12,27 @@
         <h1>Résultats de l'Audit</h1>
         <nav>
             <a href="index.html">Accueil</a>
-            <a href="audit.html">Réaliser un Audit</a>
-            <a href="contact.html">Contact</a>
+            <a href="audit.html">Audit</a>
+            <a href="resultats.html">Résultats</a>
         </nav>
     </header>
 
-    <section id="results">
-        <h2>Votre Score :</h2>
-        <p id="score"></p>
-    </section>
+    <div id="resultsContainer">
+        <h2>Résumé</h2>
+        <p id="scoreDisplay"></p>
+    </div>
 
-    <button id="download-pdf">Télécharger le PDF</button>
-
-    <script src="dashboard.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let results = JSON.parse(localStorage.getItem("auditResults"));
+            if (results) {
+                document.getElementById("scoreDisplay").innerText =
+                    `Score total: ${results.totalScore} / ${results.maxScore}`;
+            } else {
+                document.getElementById("scoreDisplay").innerText = "Aucun audit enregistré.";
+            }
+        });
+    </script>
 
 </body>
 </html>
