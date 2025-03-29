@@ -1,15 +1,22 @@
+/* Styles généraux pour tout le site */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: #f4f4f4;
+    background-color: #f4f4f4;
     color: #333;
 }
 
+/* En-tête */
 header {
-    background: #0073e6;
+    background-color: #0073e6;
     color: white;
     padding: 15px;
+    text-align: center;
+}
+
+nav {
+    margin-top: 10px;
     text-align: center;
 }
 
@@ -17,53 +24,143 @@ nav a {
     color: white;
     margin: 0 15px;
     text-decoration: none;
+    font-weight: bold;
 }
 
-h2 {
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Conteneur principal */
+.container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Titres */
+h1, h2 {
     text-align: center;
     color: #333;
 }
 
-form {
-    max-width: 600px;
-    margin: 20px auto;
-    padding: 20px;
-    background: white;
-    border-radius: 5px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-}
-
-.audit-question {
-    margin-bottom: 20px;
-}
-
-.audit-question label {
-    display: block;
-    font-weight: bold;
-}
-
-.slider {
-    width: 100%;
-    margin: 10px 0;
-}
-
-.value {
-    font-weight: bold;
-    display: block;
-    text-align: center;
-}
-
+/* Boutons */
 button {
     display: block;
     width: 100%;
-    padding: 10px;
-    background: #0073e6;
+    padding: 12px;
+    background-color: #0073e6;
     color: white;
+    font-size: 16px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: background 0.3s;
+    text-align: center;
 }
 
 button:hover {
-    background: #005bb5;
+    background-color: #005bb5;
+}
+
+/* Style des curseurs dynamiques */
+.slider-container {
+    display: flex;
+    align-items: center;
+}
+
+.slider {
+    flex: 1;
+    -webkit-appearance: none;
+    width: 100%;
+    height: 8px;
+    border-radius: 5px;
+    background: linear-gradient(to right, black 30%, red 50%, orange 80%, green 100%);
+    outline: none;
+    opacity: 0.9;
+    transition: opacity 0.2s;
+    cursor: pointer;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #0073e6;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: #0073e6;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Valeur dynamique du curseur */
+.value {
+    width: 40px;
+    text-align: center;
+    font-weight: bold;
+    color: #0073e6;
+    margin-left: 10px;
+}
+
+/* Jauge des résultats */
+.jauge-container {
+    position: relative;
+    width: 300px;
+    height: 150px;
+    margin: 30px auto;
+    background: conic-gradient(
+        black 0% 30%,
+        red 30% 50%,
+        orange 50% 80%,
+        green 80% 100%
+    );
+    border-radius: 150px 150px 0 0;
+}
+
+.jauge-aiguille {
+    position: absolute;
+    width: 6px;
+    height: 70px;
+    background: black;
+    left: 50%;
+    bottom: 0;
+    transform-origin: bottom;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Liste des audits enregistrés */
+.audit-list {
+    list-style: none;
+    padding: 0;
+}
+
+.audit-list li {
+    background: #e6f2ff;
+    padding: 10px;
+    margin: 10px 0;
+    border-left: 5px solid #0073e6;
+    border-radius: 5px;
+}
+
+/* Pied de page */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #0073e6;
+    color: white;
+    margin-top: 20px;
 }
