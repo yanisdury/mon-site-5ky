@@ -1,29 +1,49 @@
-.audit-history {
-    margin: 20px;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.audit-history h2 {
-    text-align: center;
-    color: #007bff;
-}
-
-#auditTable {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 10px;
-}
-
-#auditTable th, #auditTable td {
-    border: 1px solid #ddd;
-    padding: 10px;
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
     text-align: center;
 }
 
-#auditTable th {
-    background-color: #007bff;
+header {
+    background-color: #333;
     color: white;
+    padding: 15px;
+}
+
+nav a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.audit-results {
+    margin: 30px 0;
+}
+
+.gauge-container {
+    width: 200px;
+    margin: auto;
+}
+
+.audit-history {
+    margin: 20px auto;
+    width: 50%;
+    background: white;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.audit-history ul {
+    list-style: none;
+    padding: 0;
+}
+
+.audit-history li {
+    background: #ddd;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 3px;
 }
