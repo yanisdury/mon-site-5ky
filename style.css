@@ -1,105 +1,45 @@
-/* Réinitialisation de base */
-* {
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
-
-/* Style général du site */
-body {
-    background-color: #f4f4f4;
+    background: #f4f4f4;
     color: #333;
-    text-align: center;
-    padding: 20px;
 }
 
-/* En-tête */
 header {
-    background-color: #0073e6;
+    background: #0073e6;
     color: white;
-    padding: 20px;
-    font-size: 24px;
-    font-weight: bold;
-}
-
-/* Navigation */
-nav {
-    margin-top: 10px;
+    padding: 15px;
+    text-align: center;
 }
 
 nav a {
-    text-decoration: none;
     color: white;
     margin: 0 15px;
-    font-size: 18px;
-    padding: 10px;
+    text-decoration: none;
 }
 
-nav a:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-    border-radius: 5px;
-}
-
-/* Contenu principal */
-.container {
-    max-width: 900px;
-    margin: 20px auto;
+section {
     padding: 20px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
-/* Style des boutons */
-button {
-    background-color: #0073e6;
-    color: white;
-    border: none;
+.btn {
+    display: inline-block;
     padding: 10px 20px;
-    font-size: 18px;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-button:hover {
-    background-color: #005bb5;
-}
-
-/* Style des curseurs */
-.slider-container {
-    margin: 20px 0;
-    text-align: left;
-}
-
-.slider {
-    width: 100%;
-    margin-top: 5px;
-}
-
-.slider-value {
-    font-weight: bold;
-    color: #0073e6;
-}
-
-/* Style du tableau des résultats */
-.results-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-}
-
-.results-table th, .results-table td {
-    border: 1px solid #ddd;
-    padding: 10px;
-    text-align: left;
-}
-
-.results-table th {
-    background-color: #0073e6;
+    background: #0073e6;
     color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
 }
 
-.results-table tr:nth-child(even) {
-    background-color: #f2f2f2;
+footer {
+    background: #0073e6;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
 }
