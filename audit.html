@@ -17,55 +17,101 @@
         </nav>
     </header>
 
-    <form id="auditForm">
-        <h2>S1 - Trier (SEIRI)</h2>
-        <div class="audit-question">
-            <label>1. Aucun élément inutile n'est laissé dans l'espace de travail.</label>
-            <input type="range" min="0" max="10" step="1" value="5" name="q1">
-        </div>
-        <div class="audit-question">
-            <label>2. Toutes les machines et équipements sont utilisés régulièrement.</label>
-            <input type="range" min="0" max="10" step="1" value="5" name="q2">
-        </div>
-        <div class="audit-question">
-            <label>3. Tous les outils et accessoires sont utilisés régulièrement.</label>
-            <input type="range" min="0" max="10" step="1" value="5" name="q3">
-        </div>
-        <div class="audit-question">
-            <label>4. Une zone de stockage est définie pour les objets cassés ou rarement utilisés.</label>
-            <input type="range" min="0" max="10" step="1" value="5" name="q4">
-        </div>
+    <main>
+        <form id="auditForm">
+            <h2>S1 - Trier (SEIRI)</h2>
+            <div class="audit-question">
+                <label>1. Aucun objet inutile n’est stocké sur le lieu de travail.</label>
+                <input type="range" min="0" max="10" step="1" value="5" name="q1">
+            </div>
+            <div class="audit-question">
+                <label>2. Toutes les machines et équipements sont utilisés régulièrement.</label>
+                <input type="range" min="0" max="10" step="1" value="5" name="q2">
+            </div>
+            <div class="audit-question">
+                <label>3. Tous les outils et accessoires sont en usage régulier.</label>
+                <input type="range" min="0" max="10" step="1" value="5" name="q3">
+            </div>
+            <div class="audit-question">
+                <label>4. Un espace dédié est prévu pour les objets cassés ou peu utilisés.</label>
+                <input type="range" min="0" max="10" step="1" value="5" name="q4">
+            </div>
+            <div class="audit-question">
+                <label>5. Des standards pour éliminer les objets inutiles existent et sont suivis.</label>
+                <input type="range" min="0" max="10" step="1" value="5" name="q5">
+            </div>
 
-        <h2>S2 - Ranger (SEITON)</h2>
-        <div class="audit-question">
-            <label>5. L'emplacement des outils et équipements est clair et bien organisé.</label>
-            <input type="range" min="0" max="10" step="1" value="5" name="q5">
-        </div>
-        <div class="audit-question">
-            <label>6. Des étiquettes indiquent clairement les emplacements des objets.</label>
-            <input type="range" min="0" max="10" step="1" value="5" name="q6">
-        </div>
+            <h2>S2 - Ranger (SEITON)</h2>
+            <div class="audit-question">
+                <label>6. Les emplacements des outils et équipements sont clairs et organisés.</label>
+                <input type="range" min="0" max="10" step="1" value="5" name="q6">
+            </div>
+            <div class="audit-question">
+                <label>7. Les emplacements des matériaux et produits sont clairs et organisés.</label>
+                <input type="range" min="0" max="10" step="1" value="5" name="q7">
+            </div>
+            <div class="audit-question">
+                <label>8. Des étiquettes indiquent clairement les emplacements et les stocks.</label>
+                <input type="range" min="0" max="10" step="1" value="5" name="q8">
+            </div>
+            <div class="audit-question">
+                <label>9. Un contrôle des stocks est en place (Kanban, FIFO, etc.).</label>
+                <input type="range" min="0" max="10" step="1" value="5" name="q9">
+            </div>
+            <div class="audit-question">
+                <label>10. Les lignes de séparation sont visibles et propres selon les standards.</label>
+                <input type="range" min="0" max="10" step="1" value="5" name="q10">
+            </div>
 
-        <h2>S3 - Nettoyer (SEISO)</h2>
-        <div class="audit-question">
-            <label>7. Les sols, murs et équipements sont propres et en bon état.</label>
-            <input type="range" min="0" max="10" step="1" value="5" name="q7">
-        </div>
+            <h2>S3 - Nettoyer (SEISO)</h2>
+            <div class="audit-question">
+                <label>11. Les sols, murs, plafonds et tuyaux sont propres et en bon état.</label>
+                <input type="range" min="0" max="10" step="1" value="5" name="q11">
+            </div>
+            <div class="audit-question">
+                <label>12. Les étagères, armoires et surfaces sont nettoyées régulièrement.</label>
+                <input type="range" min="0" max="10" step="1" value="5" name="q12">
+            </div>
+            <div class="audit-question">
+                <label>13. Les machines et équipements sont entretenus et nettoyés.</label>
+                <input type="range" min="0" max="10" step="1" value="5" name="q13">
+            </div>
+            <div class="audit-question">
+                <label>14. Un bon éclairage est en place et sans poussière.</label>
+                <input type="range" min="0" max="10" step="1" value="5" name="q14">
+            </div>
 
-        <h2>S4 - Standardiser (SEIKETSU)</h2>
-        <div class="audit-question">
-            <label>8. Des affichages et codes couleur sont en place.</label>
-            <input type="range" min="0" max="10" step="1" value="5" name="q8">
-        </div>
+            <h2>S4 - Standardiser (SEIKETSU)</h2>
+            <div class="audit-question">
+                <label>15. Des affichages, panneaux et marquages normalisés sont utilisés.</label>
+                <input type="range" min="0" max="10" step="1" value="5" name="q15">
+            </div>
+            <div class="audit-question">
+                <label>16. Les procédures des trois premiers S sont clairement définies.</label>
+                <input type="range" min="0" max="10" step="1" value="5" name="q16">
+            </div>
 
-        <h2>S5 - Maintenir (SHITSUKE)</h2>
-        <div class="audit-question">
-            <label>9. Le 5S est devenu une habitude et non juste une routine.</label>
-            <input type="range" min="0" max="10" step="1" value="5" name="q9">
-        </div>
+            <h2>S5 - Maintenir (SHITSUKE)</h2>
+            <div class="audit-question">
+                <label>17. La démarche 5S est bien intégrée dans la culture de l’entreprise.</label>
+                <input type="range" min="0" max="10" step="1" value="5" name="q17">
+            </div>
+            <div class="audit-question">
+                <label>18. Les réussites 5S sont visibles (photos avant/après).</label>
+                <input type="range" min="0" max="10" step="1" value="5" name="q18">
+            </div>
+            <div class="audit-question">
+                <label>19. Un système de récompenses et reconnaissance est en place.</label>
+                <input type="range" min="0" max="10" step="1" value="5" name="q19">
+            </div>
 
-        <button type="submit">Enregistrer l'Audit</button>
-    </form>
+            <button type="submit">Valider l'audit</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 5ky - Tous droits réservés.</p>
+    </footer>
 
     <script src="audit.js"></script>
 </body>
