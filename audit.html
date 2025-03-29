@@ -4,67 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Audit 5S</title>
-    <link rel="stylesheet" href="style_audit.css">
-    <script defer src="audit.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
         <h1>Audit 5S</h1>
         <nav>
-            <a href="index_fr.html">Accueil</a>
-            <a href="audit.html">Audit</a>
+            <a href="index.html">Accueil</a>
+            <a href="resultats.html">Voir les Résultats</a>
+            <a href="contact.html">Contact</a>
         </nav>
     </header>
 
-    <section class="audit-container">
-        <h2>Évaluez votre environnement de travail selon la méthode 5S</h2>
-        
-        <form id="auditForm">
-            <h3>S1 - Trier (Sort - SEIRI)</h3>
-            <label><input type="checkbox" name="q1"> Aucun objet inutile n'est stocké dans l’espace de travail</label>
-            <label><input type="checkbox" name="q2"> Machines et équipements sont utilisés régulièrement</label>
-            <label><input type="checkbox" name="q3"> Tous les outils et équipements sont en utilisation régulière</label>
-            <label><input type="checkbox" name="q4"> Une zone est définie pour stocker les objets cassés ou rarement utilisés</label>
-            <label><input type="checkbox" name="q5"> Des standards existent pour éliminer les objets inutiles</label>
-            
-            <h3>S2 - Ranger (Set in order - SEITON)</h3>
-            <label><input type="checkbox" name="q6"> Emplacements des outils et équipements clairement définis</label>
-            <label><input type="checkbox" name="q7"> Emplacements des matériaux et produits bien organisés</label>
-            <label><input type="checkbox" name="q8"> Étiquettes visibles pour indiquer les emplacements et contenants</label>
-            <label><input type="checkbox" name="q9"> Un contrôle des stocks est en place (Kanban, FIFO, etc.)</label>
-            <label><input type="checkbox" name="q10"> Délimitations et marquages au sol clairement identifiés</label>
-
-            <h3>S3 - Nettoyer (Shine - SEISO)</h3>
-            <label><input type="checkbox" name="q11"> Sols, murs et équipements en bon état et propres</label>
-            <label><input type="checkbox" name="q12"> Éclairage suffisant et exempt de poussière</label>
-            <label><input type="checkbox" name="q13"> Un contrôle des nuisibles est en place et efficace</label>
-
-            <h3>S4 - Standardiser (Standardize - SEIKETSU)</h3>
-            <label><input type="checkbox" name="q14"> Affichages, marquages et signalisation bien définis</label>
-            <label><input type="checkbox" name="q15"> Les checklists et routines 5S sont utilisées</label>
-
-            <h3>S5 - Maintenir (Sustain - SHITSUKE)</h3>
-            <label><input type="checkbox" name="q16"> La culture 5S est intégrée au quotidien</label>
-            <label><input type="checkbox" name="q17"> Les succès sont affichés (avant/après)</label>
-            <label><input type="checkbox" name="q18"> Un système de reconnaissance est en place</label>
-
-            <button type="button" onclick="calculerScore()">Voir le résultat</button>
-        </form>
-
-        <div id="resultatAudit">
-            <h3>Résultat :</h3>
-            <p id="score"></p>
+    <form id="auditForm">
+        <div class="audit-question">
+            <label>1. L'espace de travail est-il bien organisé ?</label>
+            <input type="radio" name="q1" value="5"> Oui
+            <input type="radio" name="q1" value="3"> Partiellement
+            <input type="radio" name="q1" value="0"> Non
         </div>
-        <button id="download-pdf">Télécharger le rapport</button>
-        <a href="dashboard.html">
-    <button id="view-results">Voir les résultats</button>
-</a>
-    </section>
 
-    <footer>
-        <p>&copy; 2025 5ky - Tous droits réservés.</p>
-    </footer>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+        <div class="audit-question">
+            <label>2. Les outils sont-ils facilement accessibles ?</label>
+            <input type="radio" name="q2" value="5"> Oui
+            <input type="radio" name="q2" value="3"> Partiellement
+            <input type="radio" name="q2" value="0"> Non
+        </div>
+
+        <button type="submit">Valider l'Audit</button>
+    </form>
+
+    <script src="audit.js"></script>
+
 </body>
 </html>
