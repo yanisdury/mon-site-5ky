@@ -1,31 +1,29 @@
-document.getElementById("auditForm").addEventListener("submit", function(event) {
-    event.preventDefault();
+document.addEventListener("DOMContentLoaded", function () {
+    // Sélectionner tous les curseurs
+    const sliders = document.querySelectorAll(".range-input");
 
-    let results = {};
-    let totalScore = 0;
-    let numQuestions = 0;
+    sliders.forEach(slider => {
+        const valueDisplay = slider.nextElementSibling;
 
-    document.querySelectorAll('.audit-question').forEach((question, index) => {
-        let value = question.querySelector('input').value;
-        results[`question_${index + 1}`] = value;
-        totalScore += parseInt(value);
-        numQuestions++;
+        // Mettre à jour l'affichage initial
+        updateSliderStyle(slider, valueDisplay);
+
+        // Ajouter un écouteur d'événements sur l'input
+        slider.addEventListener("input", function () {
+            updateSliderStyle(slider, valueDisplay);
+        });
     });
 
-    let averageScore = numQuestions > 0 ? (totalScore / numQuestions).toFixed(1) : 0;
-    let dateTime = new Date().toLocaleString();
+    function updateSliderStyle(slider, valueDisplay) {
+        let value = slider.value;
+        valueDisplay.textContent = value;
 
-    let auditData = {
-        score: averageScore,
-        date: dateTime,
-        responses: results
-    };
+        // Déterminer la couleur du curseur
+        let color = "black";
+        if (value >= 4 && value <= 5) color = "red";
+        else if (value >= 6 && value <= 8) color = "orange";
+        else if (value >= 9) color = "green";
 
-    // Récupérer les audits existants et ajouter le nouveau
-    let auditHistory = JSON.parse(localStorage.getItem("auditHistory")) || [];
-    auditHistory.push(auditData);
-    localStorage.setItem("auditHistory", JSON.stringify(auditHistory));
-
-    // Redirection vers la page des résultats
-    window.location.href = "resultats.html";
+        slider.style.background = `linear-gradient(to right, ${color} ${value * 10}%, #ddd ${value * 10}%)`;
+    }
 });
