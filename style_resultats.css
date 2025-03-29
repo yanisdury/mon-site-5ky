@@ -1,107 +1,29 @@
-/* Réinitialisation globale */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
+.audit-history {
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* ---- BODY ---- */
-body {
-    background-color: #f4f4f4;
-    color: #333;
+.audit-history h2 {
     text-align: center;
+    color: #007bff;
 }
 
-/* ---- HEADER ---- */
-header {
-    background-color: #007BFF;
-    color: white;
-    padding: 15px;
-    text-align: center;
-}
-
-nav {
+#auditTable {
+    width: 100%;
+    border-collapse: collapse;
     margin-top: 10px;
 }
 
-nav a {
-    margin: 0 15px;
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-nav a:hover {
-    text-decoration: underline;
-}
-
-/* ---- SECTION DES RÉSULTATS ---- */
-.results-container {
-    background: white;
-    max-width: 600px;
-    margin: 20px auto;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: left;
-}
-
-h2 {
-    text-align: center;
-    margin-bottom: 15px;
-}
-
-/* ---- TABLEAU DES RÉSULTATS ---- */
-.results-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 15px;
-}
-
-.results-table th, .results-table td {
+#auditTable th, #auditTable td {
     border: 1px solid #ddd;
     padding: 10px;
     text-align: center;
 }
 
-.results-table th {
-    background-color: #007BFF;
+#auditTable th {
+    background-color: #007bff;
     color: white;
-}
-
-/* ---- SCORE FINAL ---- */
-#final-score {
-    font-size: 20px;
-    font-weight: bold;
-    color: #007BFF;
-    margin-top: 15px;
-    text-align: center;
-}
-
-/* ---- BOUTONS ---- */
-button {
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background 0.3s;
-    display: block;
-    margin: 20px auto;
-}
-
-button:hover {
-    background-color: #0056b3;
-}
-
-/* ---- FOOTER ---- */
-footer {
-    margin-top: 20px;
-    background-color: #007BFF;
-    color: white;
-    padding: 10px;
-    text-align: center;
 }
