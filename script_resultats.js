@@ -13,16 +13,36 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // Affichage du dernier score sur la jauge
-    if (audits.length > 0) {
-        let latestAudit = audits[audits.length - 1];
-        updateGauge(latestAudit.score);
-    }
+    let latestScore = audits.length > 0 ? audits[audits.length - 1].score : 0;
+    updateGauge(latestScore);
 });
 
-// Fonction pour mettre à jour la jauge
+// Fonction pour mettre à jour la jauge avec Chart.js
 function updateGauge(score) {
-    let angle = (score / 10) * 180 - 90; // Convertir le score en angle
-    let needle = document.getElementById("needle");
-    needle.setAttribute("transform", `rotate(${angle}, 100, 90)`);
+    let ctx = document.getElementById("gaugeChart").getContext("2d");
+
+    let gaugeChart = new Chart(ctx, {
+        type: "doughnut",
+        data: {
+            labels: ["Score", "Restant"],
+            datasets: [{
+                data: [score, 10 - score],
+                backgroundColor: [
+                    score <= 3 ? "black" : score <= 5 ? "red" : score <= 8 ? "orange" : "green",
+                    "#ddd"
+                ],
+                borderWidth: 0
+            }]
+        },
+        options: {
+            circumference: 180,
+            rotation: 270,
+            cutout: "70%",
+            plugins: {
+                legend: { display: false }
+            }
+        }
+    });
+
     document.getElementById("score-value").textContent = `Score: ${score} / 10`;
 }
