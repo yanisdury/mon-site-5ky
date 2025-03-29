@@ -3,38 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Résultats de l'Audit</title>
-    <link rel="stylesheet" href="style_resultats.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Import de Chart.js -->
+    <title>Résultats - 5ky</title>
+    <link rel="stylesheet" href="resultats.css">
 </head>
 <body>
 
     <header>
-        <h1>Résultats des Audits</h1>
+        <h1>Résultats de l'Audit</h1>
         <nav>
             <a href="index.html">Accueil</a>
-            <a href="audit.html">Réaliser un audit</a>
+            <a href="audit.html">Audit</a>
+            <a href="resultats.html">Résultats</a>
+            <a href="contact.html">Contact</a>
         </nav>
     </header>
 
-    <section class="audit-results">
-        <h2>Votre Score</h2>
-        <div class="gauge-container">
-            <canvas id="gaugeChart"></canvas> <!-- Jauge Chart.js -->
+    <section class="gauge-container">
+        <h2>Score Global</h2>
+        <div class="gauge">
+            <div class="needle"></div>
         </div>
-        <p id="score-value">Score: 0 / 10</p>
+        <p id="scoreValue">Score : -</p>
     </section>
 
-    <section class="audit-history">
-        <h2>Historique des audits</h2>
-        <ul id="audit-list"></ul>
-    </section>
-
-    <footer>
-        <p>&copy; 2025 5ky - Tous droits réservés.</p>
-    </footer>
-
-    <script src="script_resultats.js"></script>
+    <script src="resultats.js"></script>
 
 </body>
 </html>
