@@ -103,8 +103,8 @@ form {
     text-align: center;
     font-weight: bold;
     color: #0073e6;
-    position: absolute; /* Positionnement absolu */
-    right: 50%; /* Centrer horizontalement */
+    left: 50%; /* Centrer horizontalement */
+    transform: translate(-50%, -50%);
 }
 
 /* Bouton de validation */
