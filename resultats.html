@@ -1,35 +1,49 @@
-<section class="audit-history">
-    <h2>Historique des audits</h2>
-    <table id="auditTable">
-        <thead>
-            <tr>
-                <th>Date et Heure</th>
-                <th>Score</th>
-            </tr>
-        </thead>
-        <tbody>
-            <!-- Les audits seront ajoutés ici -->
-        </tbody>
-    </table>
-</section>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Résultats de l'Audit</title>
+    <link rel="stylesheet" href="style_resultats.css">
+</head>
+<body>
 
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-    let auditHistory = JSON.parse(localStorage.getItem("auditHistory")) || [];
-    let auditTableBody = document.querySelector("#auditTable tbody");
+    <header>
+        <h1>Résultats des Audits</h1>
+        <nav>
+            <a href="index.html">Accueil</a>
+            <a href="audit.html">Réaliser un audit</a>
+        </nav>
+    </header>
 
-    if (auditHistory.length === 0) {
-        auditTableBody.innerHTML = "<tr><td colspan='2'>Aucun audit enregistré</td></tr>";
-    } else {
-        auditHistory.forEach(audit => {
-            let row = `<tr>
-                <td>${audit.date}</td>
-                <td>${audit.score} / 10</td>
-            </tr>`;
-            auditTableBody.innerHTML += row;
-        });
-    }
-});
-</script>
+    <section class="audit-results">
+        <h2>Votre Score</h2>
+        <div class="gauge-container">
+            <svg class="gauge" viewBox="0 0 200 100">
+                <!-- Fond du compteur -->
+                <path d="M10,90 A90,90 0 0,1 190,90" stroke="#ccc" stroke-width="10" fill="none"/>
+                <!-- Couleurs des zones -->
+                <path d="M10,90 A90,90 0 0,1 70,10" stroke="black" stroke-width="10" fill="none"/>
+                <path d="M70,10 A90,90 0 0,1 110,10" stroke="red" stroke-width="10" fill="none"/>
+                <path d="M110,10 A90,90 0 0,1 150,10" stroke="orange" stroke-width="10" fill="none"/>
+                <path d="M150,10 A90,90 0 0,1 190,90" stroke="green" stroke-width="10" fill="none"/>
+                <!-- Aiguille -->
+                <line id="needle" x1="100" y1="90" x2="100" y2="30" stroke="black" stroke-width="5"/>
+            </svg>
+        </div>
+        <p id="score-value">Score: 0 / 10</p>
+    </section>
 
-<canvas id="scoreGauge" width="300" height="200"></canvas>
+    <section class="audit-history">
+        <h2>Historique des audits</h2>
+        <ul id="audit-list"></ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 5ky - Tous droits réservés.</p>
+    </footer>
+
+    <script src="script_resultats.js"></script>
+
+</body>
+</html>
