@@ -1,125 +1,60 @@
-/* Styles généraux */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: #f4f4f4;
-    color: #333;
-}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audit - 5ky</title>
+    <link rel="stylesheet" href="audit.css">
+</head>
+<body>
 
-/* Header et navigation */
-header {
-    background: #0073e6;
-    color: white;
-    padding: 15px;
-    text-align: center;
-}
+    <header>
+        <h1>Réaliser un Audit</h1>
+        <nav>
+            <a href="index.html">Accueil</a>
+            <a href="audit.html">Audit</a>
+            <a href="resultats.html">Résultats</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
 
-nav {
-    margin-top: 10px;
-}
+    <form id="auditForm">
+        <h2>Évaluez chaque critère sur une échelle de 0 à 10</h2>
 
-nav a {
-    color: white;
-    margin: 0 15px;
-    text-decoration: none;
-    font-weight: bold;
-}
+        <div class="audit-question">
+            <label for="q1">1. Organisation de l'espace de travail :</label>
+            <input type="range" id="q1" min="0" max="10" value="5" class="slider">
+            <span class="value">5</span>
+        </div>
 
-nav a:hover {
-    text-decoration: underline;
-}
+        <div class="audit-question">
+            <label for="q2">2. Propreté et entretien :</label>
+            <input type="range" id="q2" min="0" max="10" value="5" class="slider">
+            <span class="value">5</span>
+        </div>
 
-/* Conteneur principal */
-h2 {
-    text-align: center;
-    color: #333;
-}
+        <div class="audit-question">
+            <label for="q3">3. Gestion des outils et matériaux :</label>
+            <input type="range" id="q3" min="0" max="10" value="5" class="slider">
+            <span class="value">5</span>
+        </div>
 
-form {
-    max-width: 700px;
-    margin: 20px auto;
-    padding: 20px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-}
+        <div class="audit-question">
+            <label for="q4">4. Sécurité et signalisation :</label>
+            <input type="range" id="q4" min="0" max="10" value="5" class="slider">
+            <span class="value">5</span>
+        </div>
 
-/* Style des questions */
-.audit-question {
-    margin-bottom: 20px;
-}
+        <div class="audit-question">
+            <label for="q5">5. Implication du personnel :</label>
+            <input type="range" id="q5" min="0" max="10" value="5" class="slider">
+            <span class="value">5</span>
+        </div>
 
-.audit-question label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 5px;
-}
+        <button type="submit">Valider l'Audit</button>
+    </form>
 
-/* Style des curseurs */
-.slider-container {
-    display: flex;
-    align-items: center;
-}
+    <script src="audit.js"></script>
 
-.slider {
-    flex: 1;
-    -webkit-appearance: none;
-    width: 100%;
-    height: 8px;
-    border-radius: 5px;
-    background: linear-gradient(to right, black 30%, red 50%, orange 80%, green 100%);
-    outline: none;
-    opacity: 0.9;
-    transition: opacity 0.2s;
-    cursor: pointer;
-}
-
-.slider:hover {
-    opacity: 1;
-}
-
-.slider::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 20px;
-    height: 20px;
-    background: #0073e6;
-    border-radius: 50%;
-    cursor: pointer;
-}
-
-.slider::-moz-range-thumb {
-    width: 20px;
-    height: 20px;
-    background: #0073e6;
-    border-radius: 50%;
-    cursor: pointer;
-}
-
-/* Valeur dynamique du curseur */
-.value {
-    width: 40px;
-    text-align: center;
-    font-weight: bold;
-    color: #0073e6;
-    margin-left: 10px;
-}
-
-/* Bouton de validation */
-button {
-    display: block;
-    width: 100%;
-    padding: 12px;
-    background: #0073e6;
-    color: white;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-button:hover {
-    background: #005bb5;
-}
+</body>
+</html>
