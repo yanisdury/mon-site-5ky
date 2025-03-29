@@ -5,43 +5,105 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Audit 5S</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-
     <header>
-        <h1>Réaliser un Audit 5S</h1>
-        <nav>
-            <a href="index.html">Accueil</a>
-            <a href="audit.html">Audit</a>
-            <a href="resultats.html">Résultats</a>
-        </nav>
+        <h1>Audit 5S</h1>
     </header>
-
-    <main>
+    
+    <div class="container">
+        <h2>Évaluation des 5S</h2>
+        
         <form id="auditForm">
-            <h2>S1 - Trier (SEIRI)</h2>
-            <div class="audit-question">
-                <label>1. Aucun objet inutile n’est stocké sur le lieu de travail.</label>
-                <input type="range" min="0" max="10" step="1" value="5" name="q1" class="range-input">
-                <span class="range-value">5</span>
+            <h3>🔴 S1 - Sort (SEIRI)</h3>
+            <div class="slider-container">
+                <label>1. Pas d'objets inutiles dans l’espace de travail.</label>
+                <input type="range" min="0" max="10" value="5" class="slider">
             </div>
-
-            <div class="audit-question">
+            <div class="slider-container">
                 <label>2. Toutes les machines et équipements sont utilisés régulièrement.</label>
-                <input type="range" min="0" max="10" step="1" value="5" name="q2" class="range-input">
-                <span class="range-value">5</span>
+                <input type="range" min="0" max="10" value="5" class="slider">
+            </div>
+            <div class="slider-container">
+                <label>3. Tous les outils, fixations et accessoires sont en usage.</label>
+                <input type="range" min="0" max="10" value="5" class="slider">
+            </div>
+            <div class="slider-container">
+                <label>4. Une zone de stockage est définie pour les objets cassés, inutilisables ou occasionnels.</label>
+                <input type="range" min="0" max="10" value="5" class="slider">
+            </div>
+            <div class="slider-container">
+                <label>5. Des standards pour éliminer les objets inutiles existent et sont suivis.</label>
+                <input type="range" min="0" max="10" value="5" class="slider">
             </div>
 
-            <!-- Ajoute toutes les autres questions ici (exemple fourni, copie-les toutes de la version précédente) -->
+            <h3>🟠 S2 - Set in Order (SEITON)</h3>
+            <div class="slider-container">
+                <label>6. Les emplacements des outils et équipements sont clairs et bien organisés.</label>
+                <input type="range" min="0" max="10" value="5" class="slider">
+            </div>
+            <div class="slider-container">
+                <label>7. Les emplacements des matériaux et produits sont clairs et bien organisés.</label>
+                <input type="range" min="0" max="10" value="5" class="slider">
+            </div>
+            <div class="slider-container">
+                <label>8. Les étiquettes indiquent les emplacements, conteneurs, boîtes, étagères et objets stockés.</label>
+                <input type="range" min="0" max="10" value="5" class="slider">
+            </div>
+            <div class="slider-container">
+                <label>9. Contrôle des stocks en place (Kanban, FIFO, min/max, etc.).</label>
+                <input type="range" min="0" max="10" value="5" class="slider">
+            </div>
 
-            <button type="submit">Valider l'audit</button>
+            <h3>🟡 S3 - Shine (SEISO)</h3>
+            <div class="slider-container">
+                <label>10. Sols, murs, plafonds et tuyauteries en bon état et propres.</label>
+                <input type="range" min="0" max="10" value="5" class="slider">
+            </div>
+            <div class="slider-container">
+                <label>11. Étagères et armoires propres.</label>
+                <input type="range" min="0" max="10" value="5" class="slider">
+            </div>
+            <div class="slider-container">
+                <label>12. Machines, équipements et outils propres.</label>
+                <input type="range" min="0" max="10" value="5" class="slider">
+            </div>
+            <div class="slider-container">
+                <label>13. Objets stockés, matériaux et produits propres.</label>
+                <input type="range" min="0" max="10" value="5" class="slider">
+            </div>
+
+            <h3>🟢 S4 - Standardize (SEIKETSU)</h3>
+            <div class="slider-container">
+                <label>14. Affichages d’informations, marquages et couleurs établis.</label>
+                <input type="range" min="0" max="10" value="5" class="slider">
+            </div>
+            <div class="slider-container">
+                <label>15. Procédures pour maintenir les 3 premiers S affichées.</label>
+                <input type="range" min="0" max="10" value="5" class="slider">
+            </div>
+            <div class="slider-container">
+                <label>16. Checklists 5S, plannings et routines définis et utilisés.</label>
+                <input type="range" min="0" max="10" value="5" class="slider">
+            </div>
+            
+            <h3>🔵 S5 - Sustain (SHITSUKE)</h3>
+            <div class="slider-container">
+                <label>17. Le 5S est intégré comme mode de vie plutôt qu'une routine.</label>
+                <input type="range" min="0" max="10" value="5" class="slider">
+            </div>
+            <div class="slider-container">
+                <label>18. Des succès sont affichés (ex : photos avant/après).</label>
+                <input type="range" min="0" max="10" value="5" class="slider">
+            </div>
+            <div class="slider-container">
+                <label>19. Récompenses et reconnaissance font partie du système 5S.</label>
+                <input type="range" min="0" max="10" value="5" class="slider">
+            </div>
+
+            <button type="submit">Soumettre l'audit</button>
         </form>
-    </main>
-
-    <footer>
-        <p>&copy; 2025 5ky - Tous droits réservés.</p>
-    </footer>
-
-    <script src="audit.js"></script>
+    </div>
 </body>
 </html>
