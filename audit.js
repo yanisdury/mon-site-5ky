@@ -18,4 +18,4 @@ document.getElementById("auditForm").addEventListener("submit", function(event) 
     localStorage.setItem("auditDate", new Date().toLocaleString());
 
     window.location.href = "resultats.html";
-});
+}); 
