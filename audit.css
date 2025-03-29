@@ -104,7 +104,7 @@ form {
     font-weight: bold;
     color: #0073e6;
     position: absolute; /* Positionnement absolu */
-    left: 50%; /* Centrer horizontalement */
+    right: 50%; /* Centrer horizontalement */
 }
 
 /* Bouton de validation */
