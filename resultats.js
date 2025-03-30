@@ -30,7 +30,10 @@ document.addEventListener("DOMContentLoaded", function() {
         localStorage.setItem("auditHistory", JSON.stringify(storedAudits));
     }
 
-    // Afficher l'historique des audits avec pourcentage
+    // Trier les audits par date (du plus récent au plus ancien)
+    storedAudits.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+    // Afficher l'historique des audits avec pourcentage, du plus récent au plus ancien
     let auditList = document.getElementById("auditList");
     auditList.innerHTML = "";
     storedAudits.forEach(audit => {
