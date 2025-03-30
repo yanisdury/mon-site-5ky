@@ -1,24 +1,65 @@
-.gauge-container {
-    text-align: center;
-    margin-top: 20px;
-}
-
+/* Style pour la jauge */
 .gauge {
-    width: 200px;
-    height: 100px;
-    background: linear-gradient(to right, black 30%, red 50%, orange 80%, green 100%);
-    border-radius: 100px 100px 0 0;
     position: relative;
-    margin: 20px auto;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 5px solid #333;
+    background: #f0f0f0;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 .needle {
-    width: 5px;
-    height: 100px;
-    background: black;
     position: absolute;
-    bottom: 0;
+    width: 4px;
+    height: 80px;
+    background-color: red;
+    top: 50%;
     left: 50%;
-    transform-origin: bottom center;
-    transition: transform 1s ease-out;
+    transform-origin: 50% 100%;
+    transform: rotate(0deg); /* Position initiale */
+    transition: transform 0.5s ease-out;
+}
+
+/* Style général pour la page de résultats */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    background-color: #444;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background-color: #555;
+}
+
+.gauge-container {
+    margin-top: 50px;
+    text-align: center;
+}
+
+#scoreValue {
+    font-size: 1.5em;
+    margin-top: 20px;
 }
