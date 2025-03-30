@@ -33,12 +33,35 @@ document.addEventListener("DOMContentLoaded", function() {
     // Trier les audits par date (du plus récent au plus ancien)
     storedAudits.sort((a, b) => new Date(b.date) - new Date(a.date));
 
-    // Afficher l'historique des audits avec pourcentage, du plus récent au plus ancien
+    // Fonction pour déterminer la couleur de la pastille en fonction du score
+    function getScoreColor(percentage) {
+        if (percentage < 40) {
+            return "black"; // Score faible
+        } else if (percentage < 60) {
+            return "red"; // Score moyen
+        } else if (percentage < 80) {
+            return "orange"; // Bon score
+        } else {
+            return "green"; // Très bon score
+        }
+    }
+
+    // Afficher l'historique des audits avec pourcentage et pastille colorée, du plus récent au plus ancien
     let auditList = document.getElementById("auditList");
     auditList.innerHTML = "";
     storedAudits.forEach(audit => {
         let listItem = document.createElement("li");
+
+        // Créer la pastille
+        let scoreColor = getScoreColor(audit.percentage);
+        let circle = document.createElement("span");
+        circle.classList.add("score-circle");
+        circle.style.backgroundColor = scoreColor;
+
+        // Ajouter la pastille et le texte de l'audit
         listItem.textContent = `Audit du ${audit.date} : ${audit.percentage}% (Score : ${audit.score} / ${audit.maxScore})`;
+        listItem.prepend(circle); // Placer la pastille avant le texte
+
         auditList.appendChild(listItem);
     });
 
