@@ -81,8 +81,8 @@ form {
 /* Valeur dynamique */
 .value {
     position: absolute;
-    top: 5px;
-    left: 50%;
+    top: 10px;
+    left: 55%;
     transform: translateX(-50%);
     font-weight: bold;
     color: #0073e6;
