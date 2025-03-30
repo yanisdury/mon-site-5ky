@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     // Trier les audits par date (du plus récent au plus ancien)
-    storedAudits.sort((a, b) => new Date(b.date) - new Date(a.date));
+    storedAudits.sort((a, b) => new Date(a.date) - new Date(b.date));
 
     // Fonction pour déterminer la couleur de la pastille en fonction du score
     function getScoreColor(percentage) {
