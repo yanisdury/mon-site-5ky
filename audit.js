@@ -1,46 +1,21 @@
-document.addEventListener("DOMContentLoaded", function () {
-    // Sélectionne tous les curseurs
-    const sliders = document.querySelectorAll(".slider");
+document.querySelectorAll('.slider').forEach(slider => {
+    slider.addEventListener('input', function() {
+        this.nextElementSibling.textContent = this.value;
+    });
+});
 
-    sliders.forEach(slider => {
-        const valueDisplay = slider.nextElementSibling; // Sélectionne l'élément affichant la valeur
-
-        // Fonction pour mettre à jour l'affichage du curseur
-        function updateValue() {
-            const value = slider.value;
-            valueDisplay.textContent = value;
-
-            // Changement de couleur selon la valeur
-            if (value < 3) {
-                valueDisplay.style.color = "black";
-            } else if (value < 5) {
-                valueDisplay.style.color = "red";
-            } else if (value < 8) {
-                valueDisplay.style.color = "orange";
-            } else {
-                valueDisplay.style.color = "green";
-            }
-        }
-
-        // Initialise la valeur au chargement
-        updateValue();
-
-        // Met à jour la valeur lors d'un mouvement du curseur
-        slider.addEventListener("input", updateValue);
+document.getElementById("auditForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    
+    let auditResults = {};
+    
+    document.querySelectorAll('.audit-question').forEach((question, index) => {
+        let value = question.querySelector('.slider').value;
+        auditResults[`question_${index + 1}`] = value;
     });
 
-    // Gestion du bouton "Valider l’audit"
-    document.getElementById("validateAudit").addEventListener("click", function () {
-        // Récupérer toutes les valeurs des curseurs
-        let results = [];
-        sliders.forEach(slider => {
-            results.push(slider.value);
-        });
+    localStorage.setItem("auditResults", JSON.stringify(auditResults));
+    localStorage.setItem("auditDate", new Date().toLocaleString());
 
-        // Sauvegarde les résultats dans le localStorage
-        localStorage.setItem("auditResults", JSON.stringify(results));
-
-        // Redirection vers la page des résultats sans ajouter à l'historique
-        window.location.replace("resultats.html");
-    });
+    window.location.href = "resultats.html";
 });
