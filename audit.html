@@ -21,34 +21,45 @@
     <form id="auditForm">
         <h2>Évaluez chaque critère sur une échelle de 0 à 10</h2>
 
+        <!-- Liste des questions avec curseurs -->
         <div class="audit-question">
             <label for="q1">1. Organisation de l'espace de travail :</label>
-            <input type="range" id="q1" min="0" max="10" value="5" class="slider">
-            <span class="value">5</span>
+            <div class="slider-container">
+                <input type="range" id="q1" min="0" max="10" value="5" class="slider">
+                <span class="value">5</span>
+            </div>
         </div>
 
         <div class="audit-question">
             <label for="q2">2. Propreté et entretien :</label>
-            <input type="range" id="q2" min="0" max="10" value="5" class="slider">
-            <span class="value">5</span>
+            <div class="slider-container">
+                <input type="range" id="q2" min="0" max="10" value="5" class="slider">
+                <span class="value">5</span>
+            </div>
         </div>
 
         <div class="audit-question">
             <label for="q3">3. Gestion des outils et matériaux :</label>
-            <input type="range" id="q3" min="0" max="10" value="5" class="slider">
-            <span class="value">5</span>
+            <div class="slider-container">
+                <input type="range" id="q3" min="0" max="10" value="5" class="slider">
+                <span class="value">5</span>
+            </div>
         </div>
 
         <div class="audit-question">
             <label for="q4">4. Sécurité et signalisation :</label>
-            <input type="range" id="q4" min="0" max="10" value="5" class="slider">
-            <span class="value">5</span>
+            <div class="slider-container">
+                <input type="range" id="q4" min="0" max="10" value="5" class="slider">
+                <span class="value">5</span>
+            </div>
         </div>
 
         <div class="audit-question">
             <label for="q5">5. Implication du personnel :</label>
-            <input type="range" id="q5" min="0" max="10" value="5" class="slider">
-            <span class="value">5</span>
+            <div class="slider-container">
+                <input type="range" id="q5" min="0" max="10" value="5" class="slider">
+                <span class="value">5</span>
+            </div>
         </div>
 
         <button type="submit">Valider l'Audit</button>
