@@ -1,24 +1,93 @@
+/* Styles généraux */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+    color: #333;
+}
+
+/* Header */
+header {
+    background: #0073e6;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+/* Conteneur de la jauge */
 .gauge-container {
     text-align: center;
     margin-top: 20px;
 }
 
+/* Jauge semi-circulaire */
 .gauge {
     width: 200px;
     height: 100px;
-    background: linear-gradient(to right, black 30%, red 50%, orange 80%, green 100%);
+    background: linear-gradient(to right, black 10%, red 30%, orange 60%, green 100%);
     border-radius: 100px 100px 0 0;
     position: relative;
     margin: 20px auto;
 }
 
+/* Aiguille */
 .needle {
     width: 5px;
-    height: 100px;
+    height: 90px;
     background: black;
     position: absolute;
     bottom: 0;
     left: 50%;
     transform-origin: bottom center;
     transition: transform 1s ease-out;
+}
+
+/* Liste des audits */
+.audit-history {
+    max-width: 600px;
+    margin: 20px auto;
+    background: white;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.audit-history h3 {
+    text-align: center;
+}
+
+.audit-history ul {
+    list-style: none;
+    padding: 0;
+}
+
+.audit-history li {
+    background: #e6f2ff;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Bouton de téléchargement */
+#downloadResults {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+    background: #0073e6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#downloadResults:hover {
+    background: #005bb5;
 }
