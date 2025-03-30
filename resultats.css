@@ -75,6 +75,15 @@ nav a {
     border-radius: 5px;
 }
 
+/* Style de la pastille (petit cercle coloré) */
+.score-circle {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 10px;
+    display: inline-block;
+}
+
 /* Bouton de téléchargement */
 #downloadResults {
     display: block;
