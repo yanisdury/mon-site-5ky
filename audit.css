@@ -53,6 +53,18 @@ form {
     text-align: center;
 }
 
+/* Valeur dynamique du curseur */
+.value {
+    width: 40px;
+    text-align: center;
+    font-weight: bold;
+    color: #0073e6;
+    position: relative;
+    top: 3px; /* Ajustement pour être centré au-dessus */
+    left: 50%;
+    transform: translateX(-50%);
+
+
 button {
     display: block;
     width: 100%;
