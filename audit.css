@@ -1,4 +1,3 @@
-/* Styles généraux */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -7,56 +6,33 @@ body {
     color: #333;
 }
 
-/* Header */
 header {
     background: #0073e6;
     color: white;
     padding: 15px;
     text-align: center;
-    font-size: 24px;
-    font-weight: bold;
-}
-
-/* Navigation */
-nav {
-    text-align: center;
-    margin-top: 10px;
 }
 
 nav a {
     color: white;
-    background: #005bb5;
-    padding: 10px 15px;
-    margin: 5px;
-    border-radius: 5px;
+    margin: 0 15px;
     text-decoration: none;
-    font-weight: bold;
-    display: inline-block;
-    transition: background 0.3s;
 }
 
-nav a:hover {
-    background: #003f80;
-}
-
-/* Conteneur principal */
 h2 {
     text-align: center;
     color: #333;
-    margin-top: 20px;
 }
 
-/* Formulaire */
 form {
-    max-width: 700px;
+    max-width: 600px;
     margin: 20px auto;
     padding: 20px;
     background: white;
-    border-radius: 10px;
+    border-radius: 5px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Style des questions */
 .audit-question {
     margin-bottom: 20px;
 }
@@ -64,86 +40,30 @@ form {
 .audit-question label {
     display: block;
     font-weight: bold;
-    margin-bottom: 5px;
-}
-
-/* Style des curseurs */
-.slider-container {
-    display: flex;
-    align-items: center;
 }
 
 .slider {
-    flex: 1;
-    -webkit-appearance: none;
     width: 100%;
-    height: 8px;
-    border-radius: 5px;
-    background: linear-gradient(to right, black 30%, red 50%, orange 80%, green 100%);
-    outline: none;
-    opacity: 0.9;
-    transition: opacity 0.2s;
-    cursor: pointer;
+    margin: 10px 0;
 }
 
-.slider:hover {
-    opacity: 1;
-}
-
-.slider::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 20px;
-    height: 20px;
-    background: #0073e6;
-    border-radius: 50%;
-    cursor: pointer;
-}
-
-.slider::-moz-range-thumb {
-    width: 20px;
-    height: 20px;
-    background: #0073e6;
-    border-radius: 50%;
-    cursor: pointer;
-}
-
-/* Valeur dynamique du curseur */
 .value {
-    width: 40px;
-    text-align: center;
     font-weight: bold;
-    color: #0073e6;
-    position: relative;
-    top: -30px; /* Ajustement pour être centré au-dessus */
-    left: 50%;
-    transform: translateX(-50%);
+    display: block;
+    text-align: center;
 }
 
-/* Boutons */
 button {
     display: block;
     width: 100%;
-    padding: 12px;
+    padding: 10px;
     background: #0073e6;
     color: white;
-    font-size: 16px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background 0.3s;
-    margin-top: 20px;
 }
 
 button:hover {
     background: #005bb5;
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    margin-top: 20px;
-    padding: 10px;
-    background: #0073e6;
-    color: white;
 }
