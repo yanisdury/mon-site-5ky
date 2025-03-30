@@ -1,16 +1,20 @@
-document.addEventListener("DOMContentLoaded", function() {
-    let auditResults = JSON.parse(localStorage.getItem("auditResults"));
-    let auditDate = localStorage.getItem("auditDate");
+document.addEventListener("DOMContentLoaded", function () {
+    // Récupérer les résultats stockés dans le localStorage
+    const auditData = JSON.parse(localStorage.getItem("auditResults"));
 
-    if (auditResults) {
-        let totalScore = Object.values(auditResults).reduce((acc, val) => acc + parseInt(val), 0);
-        let maxScore = Object.keys(auditResults).length * 10;
-        let percentage = (totalScore / maxScore) * 100;
+    // Si des résultats sont trouvés, les afficher
+    if (auditData) {
+        const score = auditData.score;
 
-        document.getElementById("scoreValue").textContent = `Score : ${totalScore} / ${maxScore} (Audit du ${auditDate})`;
+        // Affichage du score dans le texte
+        const scoreValueElement = document.getElementById("scoreValue");
+        scoreValueElement.textContent = `Score : ${score.toFixed(2)} / 100`;
 
-        let needle = document.querySelector(".needle");
-        let rotation = (percentage * 1.8) - 90; 
-        needle.style.transform = `rotate(${rotation}deg)`;
+        // Mise à jour de l'aiguille de la jauge
+        const needle = document.querySelector(".needle");
+        const needleDegree = (score / 100) * 180; // Calculer l'angle de l'aiguille en fonction du score
+        needle.style.transform = `rotate(${needleDegree}deg)`; // Applique l'angle à l'aiguille
+    } else {
+        console.log("Aucun résultat trouvé.");
     }
 });
