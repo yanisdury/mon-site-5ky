@@ -20,25 +20,30 @@ document.addEventListener("DOMContentLoaded", function() {
         let rotation = (percentage * 1.8) - 90;
         needle.style.transform = `rotate(${rotation}deg)`; // Ajuste l'aiguille en fonction du pourcentage
 
-        // Ajouter le nouvel audit à l'historique
-        storedAudits.push({ date: auditDate, score: totalScore, maxScore: maxScore });
+        // Ajouter le nouvel audit à l'historique avec le pourcentage
+        storedAudits.push({
+            date: auditDate,
+            score: totalScore,
+            maxScore: maxScore,
+            percentage: percentage.toFixed(2)
+        });
         localStorage.setItem("auditHistory", JSON.stringify(storedAudits));
     }
 
-    // Afficher l'historique des audits
+    // Afficher l'historique des audits avec pourcentage
     let auditList = document.getElementById("auditList");
     auditList.innerHTML = "";
     storedAudits.forEach(audit => {
         let listItem = document.createElement("li");
-        listItem.textContent = `Audit du ${audit.date} : ${audit.score} / ${audit.maxScore}`;
+        listItem.textContent = `Audit du ${audit.date} : ${audit.percentage}% (Score : ${audit.score} / ${audit.maxScore})`;
         auditList.appendChild(listItem);
     });
 
     // Fonction pour télécharger les résultats en CSV
     document.getElementById("downloadResults").addEventListener("click", function() {
-        let csvContent = "Date,Score,Score Max\n";
+        let csvContent = "Date,Score,Score Max,Pourcentage\n";
         storedAudits.forEach(audit => {
-            csvContent += `${audit.date},${audit.score},${audit.maxScore}\n`;
+            csvContent += `${audit.date},${audit.score},${audit.maxScore},${audit.percentage}\n`;
         });
 
         let blob = new Blob([csvContent], { type: "text/csv" });
