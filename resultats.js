@@ -6,15 +6,19 @@ document.addEventListener("DOMContentLoaded", function() {
     let auditDate = localStorage.getItem("auditDate");
 
     if (auditResults) {
+        // Calcul du score total et du score maximum
         let totalScore = Object.values(auditResults).reduce((acc, val) => acc + parseInt(val), 0);
         let maxScore = Object.keys(auditResults).length * 10;
+        
+        // Calcul du score en pourcentage
         let percentage = (totalScore / maxScore) * 100;
 
-        document.getElementById("scoreValue").textContent = `Score : ${totalScore} / ${maxScore} (Audit du ${auditDate})`;
+        // Affichage du score en pourcentage
+        document.getElementById("scoreValue").textContent = `Score : ${percentage.toFixed(2)}% (Audit du ${auditDate})`;
 
         let needle = document.querySelector(".needle");
-        let rotation = (percentage * 1.8) - 90; 
-        needle.style.transform = `rotate(${rotation}deg)`;
+        let rotation = (percentage * 1.8) - 90;
+        needle.style.transform = `rotate(${rotation}deg)`; // Ajuste l'aiguille en fonction du pourcentage
 
         // Ajouter le nouvel audit à l'historique
         storedAudits.push({ date: auditDate, score: totalScore, maxScore: maxScore });
