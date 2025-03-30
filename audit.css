@@ -1,3 +1,4 @@
+/* Styles généraux */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -6,6 +7,7 @@ body {
     color: #333;
 }
 
+/* Header et navigation */
 header {
     background: #0073e6;
     color: white;
@@ -33,6 +35,7 @@ form {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Style des questions */
 .audit-question {
     margin-bottom: 20px;
 }
@@ -40,19 +43,53 @@ form {
 .audit-question label {
     display: block;
     font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Curseurs */
+.slider-container {
+    display: flex;
+    align-items: center;
+    position: relative;
 }
 
 .slider {
     width: 100%;
-    margin: 10px 0;
+    -webkit-appearance: none;
+    height: 8px;
+    border-radius: 5px;
+    background: linear-gradient(to right, red 0%, orange 50%, green 100%);
+    outline: none;
+    transition: opacity 0.2s;
+    cursor: pointer;
 }
 
+.slider:hover {
+    opacity: 1;
+}
+
+/* Style du curseur (pouce) */
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #0073e6;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Valeur dynamique */
 .value {
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
     font-weight: bold;
-    display: block;
-    text-align: center;
+    color: #0073e6;
+    transition: color 0.2s;
 }
 
+/* Bouton */
 button {
     display: block;
     width: 100%;
