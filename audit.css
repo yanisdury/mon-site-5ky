@@ -104,7 +104,6 @@ form {
     font-weight: bold;
     color: #0073e6;
     left: 50%; /* Centrer horizontalement */
-    transform: translate(-50%, -50%);
 }
 
 /* Bouton de validation */
