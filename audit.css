@@ -38,6 +38,7 @@ form {
     display: flex;
     align-items: center;
     position: relative;
+    margin-bottom: 15px;
 }
 
 .slider {
@@ -67,20 +68,10 @@ form {
     cursor: pointer;
 }
 
-.slider::-moz-range-thumb {
-    width: 20px;
-    height: 20px;
-    background: #0073e6;
-    border-radius: 50%;
-    cursor: pointer;
-}
-
 /* Valeur dynamique du curseur */
 .value {
     position: absolute;
     top: -30px;
-    left: 50%;
-    transform: translateX(-50%);
     font-weight: bold;
     padding: 4px 8px;
     border-radius: 5px;
@@ -88,24 +79,15 @@ form {
     transition: all 0.2s ease-in-out;
     background: white;
     border: 1px solid #ccc;
-}
-
-/* Couleurs dynamiques de la valeur du curseur */
-.value.low {
+    font-size: 14px;
     color: black;
 }
 
-.value.medium-low {
-    color: red;
-}
-
-.value.medium {
-    color: orange;
-}
-
-.value.high {
-    color: green;
-}
+/* Couleurs dynamiques de la valeur */
+.value.low { color: black; }
+.value.medium-low { color: red; }
+.value.medium { color: orange; }
+.value.high { color: green; }
 
 /* Bouton de validation */
 button {
