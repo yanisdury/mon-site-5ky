@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // Sauvegarde les résultats dans le localStorage
         localStorage.setItem("auditResults", JSON.stringify(results));
 
-        // Redirection vers la page des résultats
-        window.location.href = "resultats.html";
+        // Redirection vers la page des résultats sans ajouter à l'historique
+        window.location.replace("resultats.html");
     });
 });
